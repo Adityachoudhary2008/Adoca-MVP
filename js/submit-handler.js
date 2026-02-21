@@ -11,7 +11,7 @@ const submitHandler = {
     TARGET_EMAIL: 'adoca.tools@gmail.com',
 
     async send(data) {
-        console.log("Processing submission for:", data.category);
+        console.info("ADOCA TITAN: Processing submission for", data.category);
 
         const payload = {
             ...data,
