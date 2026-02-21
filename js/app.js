@@ -139,9 +139,19 @@ const app = {
         ];
 
         pool.forEach(cat => {
-            if (cat.label.toLowerCase().includes(term)) matches.push({ cat, sub: null });
-            cat.subs.forEach(s => {
-                if (s.toLowerCase().includes(term)) matches.push({ cat, sub: s });
+            const labelEn = cat.label.toLowerCase();
+            const labelHi = (cat.label_hi || '').toLowerCase();
+
+            if (labelEn.includes(term) || labelHi.includes(term)) {
+                matches.push({ cat, sub: null });
+            }
+
+            cat.subs.forEach((s, idx) => {
+                const subEn = s.toLowerCase();
+                const subHi = (cat.subs_hi ? cat.subs_hi[idx] : '').toLowerCase();
+                if (subEn.includes(term) || subHi.includes(term)) {
+                    matches.push({ cat, sub: s, sub_hi: cat.subs_hi ? cat.subs_hi[idx] : null });
+                }
             });
         });
 
@@ -151,14 +161,14 @@ const app = {
 
         if (unique.length > 0) {
             dropdown.innerHTML = unique.map(m => {
-                const text = m.sub || m.cat.label;
+                const text = this.state.lang === 'hi' ? (m.sub_hi || m.sub || m.cat.label_hi || m.cat.label) : (m.sub || m.cat.label);
                 const highlighted = text.replace(new RegExp(safeTerm, 'gi'), match => `<span class="highlight">${match}</span>`);
                 return `
                     <div class="q-search-item" onclick="app.navigate('${m.cat.type}', '${m.cat.id}', ${m.sub ? `'${m.sub}'` : 'null'})">
                         <i data-lucide="${m.sub ? 'search' : m.cat.icon}" style="width:20px;"></i>
                         <div style="display:flex; flex-direction:column;">
                             <span style="font-weight: 700; color: var(--q-text-bold);">${highlighted}</span>
-                            <span style="font-size: 0.75rem; color: var(--q-text-light); text-transform: uppercase;">${m.sub ? m.cat.label : m.cat.type}</span>
+                            <span style="font-size: 0.75rem; color: var(--q-text-light); text-transform: uppercase;">${this.state.lang === 'hi' ? (m.cat.label_hi || m.cat.label) : m.cat.label}</span>
                         </div>
                     </div>
                 `;

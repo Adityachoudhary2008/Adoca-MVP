@@ -19,44 +19,54 @@ const CONFIG = {
     // 50+ SERVICE CATEGORIES WITH SUB-CATEGORIES
     SERVICE_CATEGORIES: [
         {
-            id: 'electrician', label: 'Electrician', icon: 'zap',
-            subs: ['Fan Repair', 'House Wiring', 'AC Installation', 'Inverter Service', 'Switchboard Fix', 'Motor Repair', 'Geyser Service', 'Light Fitting']
+            id: 'electrician', label: 'Electrician', label_hi: 'बिजलीवाला (Electrician)', icon: 'zap',
+            subs: ['Fan Repair', 'House Wiring', 'AC Installation', 'Inverter Service', 'Switchboard Fix', 'Motor Repair', 'Geyser Service', 'Light Fitting'],
+            subs_hi: ['पंखा रिपेयर', 'हाउस वायरिंग', 'एसी इंस्टॉलेशन', 'इन्वर्टर सर्विस', 'स्विचबोर्ड ठीक करें', 'मोटर रिपेयर', 'गीज़र सर्विस', 'लाइट फिटिंग']
         },
         {
-            id: 'plumber', label: 'Plumber', icon: 'droplets',
-            subs: ['Leakage Repair', 'Tap Installation', 'Pipe Fitting', 'Tank Cleaning', 'Basin Setup', 'Toilet Repair', 'Motor Pump Fix', 'Kitchen Sink']
+            id: 'plumber', label: 'Plumber', label_hi: 'नल मिस्त्री (Plumber)', icon: 'droplets',
+            subs: ['Leakage Repair', 'Tap Installation', 'Pipe Fitting', 'Tank Cleaning', 'Basin Setup', 'Toilet Repair', 'Motor Pump Fix', 'Kitchen Sink'],
+            subs_hi: ['लीकेज रिपेयर', 'नल फिटिंग', 'पाइप फिटिंग', 'टैंक सफाई', 'बेसिन सेटअप', 'टॉयलेट रिपेयर', 'मोटर पंप ठीक करें', 'किचन सिंक']
         },
         {
-            id: 'carpenter', label: 'Carpenter', icon: 'hammer',
-            subs: ['Furniture Repair', 'Door Fitting', 'Cabinet Making', 'Bed Assembly', 'Sofa Polish', 'Locks/Latches', 'Wood Carving', 'Modular Kitchen']
+            id: 'carpenter', label: 'Carpenter', label_hi: 'बढ़ई (Carpenter)', icon: 'hammer',
+            subs: ['Furniture Repair', 'Door Fitting', 'Cabinet Making', 'Bed Assembly', 'Sofa Polish', 'Locks/Latches', 'Wood Carving', 'Modular Kitchen'],
+            subs_hi: ['फर्नीचर रिपेयर', 'दरवाजा फिटिंग', 'कैबिनेट बनाना', 'बेड असेंबली', 'सोफा पॉलिश', 'ताला चाबी', 'लकड़ी नक्काशी', 'मॉड्यूलर किचन']
         },
         {
-            id: 'cleaning', label: 'Cleaning', icon: 'sparkles',
-            subs: ['Full Home Deep Cleaning', 'Sofa/Carpet Cleaning', 'Bathroom Cleaning', 'Kitchen Cleaning', 'Water Tank Cleaning', 'Pest Control', 'Disinfection Service']
+            id: 'cleaning', label: 'Cleaning', label_hi: 'सफाई (Cleaning)', icon: 'sparkles',
+            subs: ['Full Home Deep Cleaning', 'Sofa/Carpet Cleaning', 'Bathroom Cleaning', 'Kitchen Cleaning', 'Water Tank Cleaning', 'Pest Control', 'Disinfection Service'],
+            subs_hi: ['घर की पूरी सफाई', 'सोफा/कार्पेट सफाई', 'बाथरूम की सफाई', 'किचन सफाई', 'वॉटर टैंक सफाई', 'पेस्ट कंट्रोल', 'डिसइंफेक्शन सर्विस']
         },
         {
-            id: 'painter', label: 'Painter', icon: 'paint-bucket',
-            subs: ['Interior Painting', 'Exterior Painting', 'Wall Putty', 'Texture Painting', 'Waterproofing', 'Metal/Wood Polish']
+            id: 'painter', label: 'Painter', label_hi: 'पेंटर (Painter)', icon: 'paint-bucket',
+            subs: ['Interior Painting', 'Exterior Painting', 'Wall Putty', 'Texture Painting', 'Waterproofing', 'Metal/Wood Polish'],
+            subs_hi: ['घर की पुताई', 'बाहरी पुताई', 'वॉल पुट्टी', 'टेक्सचर पेंटिंग', 'वॉटरप्रूफिंग', 'मेटल/लकड़ी पॉलिश']
         },
         {
-            id: 'ac_repair', label: 'AC & Cooling', icon: 'wind',
-            subs: ['AC Servicing', 'Gas Charging', 'Split AC Install', 'Window AC Service', 'Fridge Repair', 'Cooler Service']
+            id: 'ac_repair', label: 'AC & Cooling', label_hi: 'एसी और कूलिंग (AC & Cooling)', icon: 'wind',
+            subs: ['AC Servicing', 'Gas Charging', 'Split AC Install', 'Window AC Service', 'Fridge Repair', 'Cooler Service'],
+            subs_hi: ['एसी सर्विसिंग', 'गैस चार्जिंग', 'स्प्लिट एसी फिटिंग', 'विंडो एसी सर्विस', 'फ्रिज रिपेयर', 'कूलर सर्विस']
         },
         {
-            id: 'ro_service', label: 'Water Purifier', icon: 'filter',
-            subs: ['RO Installation', 'Filter Change', 'Water Testing', 'AMC Service', 'Fault Repair']
+            id: 'ro_service', label: 'Water Purifier', label_hi: 'वॉटर प्यूरीफायर (RO)', icon: 'filter',
+            subs: ['RO Installation', 'Filter Change', 'Water Testing', 'AMC Service', 'Fault Repair'],
+            subs_hi: ['आरो इंस्टॉलेशन', 'फिल्टर बदलना', 'पानी की जांच', 'एएमसी सर्विस', 'फौल्ट रिपेयर']
         },
         {
-            id: 'beautician', label: 'Beauty & Salon', icon: 'scissors',
-            subs: ['Haircut', 'Bridal Makeup', 'Facial & Cleanup', 'Manicure/Pedicure', 'Waxing/Threading', 'Grooming Service']
+            id: 'beautician', label: 'Beauty & Salon', label_hi: 'ब्यूटी और सैलून', icon: 'scissors',
+            subs: ['Haircut', 'Bridal Makeup', 'Facial & Cleanup', 'Manicure/Pedicure', 'Waxing/Threading', 'Grooming Service'],
+            subs_hi: ['हेयरकट', 'ब्राइडल मेकअप', 'फेशियल', 'मेनीक्योर/पेडीक्योर', 'वैक्सिंग', 'ग्रूमिंग']
         },
         {
-            id: 'appliance', label: 'Appliances', icon: 'tv',
-            subs: ['TV Repair', 'Washing Machine', 'Microwave Repair', 'Chimney Service', 'Dishwasher Fix']
+            id: 'appliance', label: 'Appliances', label_hi: 'घर के उपकरण', icon: 'tv',
+            subs: ['TV Repair', 'Washing Machine', 'Microwave Repair', 'Chimney Service', 'Dishwasher Fix'],
+            subs_hi: ['टीवी रिपेयर', 'वाशिंग मशीन', 'माइक्रोवेव रिपेयर', 'चिमनी सर्विस', 'डिशवॉशर ठीक करें']
         },
         {
-            id: 'automotive', label: 'Vehicle Service', icon: 'car',
-            subs: ['Car Wash', 'Bike Servicing', 'Tyre/Puncture', 'Battery Change', 'Engine Tuning', 'Detailing']
+            id: 'automotive', label: 'Vehicle Service', label_hi: 'वोकल रिपेयर (Vehicle)', icon: 'car',
+            subs: ['Car Wash', 'Bike Servicing', 'Tyre/Puncture', 'Battery Change', 'Engine Tuning', 'Detailing'],
+            subs_hi: ['कार वॉश', 'बाइक सर्विसिंग', 'टायर/पंचर', 'बैटरी बदलना', 'इंजन ट्यूनिंग', 'डिटेलिंग']
         },
         { id: 'laundry', label: 'Laundry', icon: 'shirt', subs: ['Dry Cleaning', 'Ironing', 'Wash & Fold', 'Shoe Cleaning'] },
         { id: 'security', label: 'CCTV & Security', icon: 'shield', subs: ['Camera Install', 'Fingerprint Lock', 'DVR Setup', 'Intercom Repair'] },
@@ -117,49 +127,75 @@ const CONFIG = {
     // 50+ PRODUCT CATEGORIES WITH SUB-CATEGORIES
     PRODUCT_CATEGORIES: [
         {
-            id: 'construction', label: 'Construction', icon: 'brick-wall',
-            subs: ['ACC Cement', 'TMT Bars (Sariya)', 'Red Bricks', 'Sand/Bajri', 'Stone Chips', 'Ultratech', 'Birla Gold', 'Paints/Putty']
+            id: 'construction', label: 'Construction', label_hi: 'बिल्डिंग सामान (Construction)', icon: 'brick-wall',
+            subs: ['ACC Cement', 'TMT Bars (Sariya)', 'Red Bricks', 'Sand/Bajri', 'Stone Chips', 'Ultratech', 'Birla Gold', 'Paints/Putty'],
+            subs_hi: ['एसीसी सीमेंट', 'सरिया (TMT Bars)', 'लाल ईंटें', 'बालू/बजरी', 'गिट्टी', 'अल्ट्राटेक', 'बिरला गोल्ड', 'पेंट/पुट्टी']
         },
         {
-            id: 'cement', label: 'Cement & Binding', icon: 'package-plus',
-            subs: ['OPC 43/53', 'PPC Cement', 'White Cement', 'Wall Putty', 'Adhesives']
+            id: 'cement', label: 'Cement & Binding', label_hi: 'सीमेंट और बाइंडिंग', icon: 'package-plus',
+            subs: ['OPC 43/53', 'PPC Cement', 'White Cement', 'Wall Putty', 'Adhesives'],
+            subs_hi: ['ओपीसी ४३/५३', 'पीपीसी सीमेंट', 'सफेद सीमेंट', 'वॉल पुट्टी', 'चिपकाने वाला सामान']
         },
         {
-            id: 'hardware', label: 'Hardware', icon: 'wrench',
-            subs: ['Locks/Handles', 'Nails & Screws', 'Power Tools', 'Hinges', 'Hand Tools', 'Pipes & Fittings']
+            id: 'hardware', label: 'Hardware', label_hi: 'हार्डवेयर (Hardware)', icon: 'wrench',
+            subs: ['Locks/Handles', 'Nails & Screws', 'Power Tools', 'Hinges', 'Hand Tools', 'Pipes & Fittings'],
+            subs_hi: ['ताले/हैंडल', 'कीले और पेंच', 'पावर टूल्स', 'कब्जे', 'हाथ के औजार', 'पाइप फिटिंग']
         },
         {
-            id: 'electrical_sales', label: 'Electric Shop', icon: 'plug',
-            subs: ['Cables & Wires', 'Modular Switches', 'LED Lights', 'MCB/DB', 'Fans', 'Conduits']
+            id: 'electrical_sales', label: 'Electric Shop', label_hi: 'बिजली का सामान', icon: 'plug',
+            subs: ['Cables & Wires', 'Modular Switches', 'LED Lights', 'MCB/DB', 'Fans', 'Conduits'],
+            subs_hi: ['तार और केबल', 'मॉड्यूलर स्विच', 'एलईडी लाइट्स', 'एमसीबी', 'पंखे', 'कौंडुइट्स']
         },
         {
-            id: 'sanitary', label: 'Sanitaryware', icon: 'bath',
-            subs: ['Basins', 'Commodes', 'Taps & Showers', 'PVC Pipes', 'Kitchen Sinks', 'Accessories']
+            id: 'sanitary', label: 'Sanitaryware', label_hi: 'सेनेटरी का सामान', icon: 'bath',
+            subs: ['Basins', 'Commodes', 'Taps & Showers', 'PVC Pipes', 'Kitchen Sinks', 'Accessories'],
+            subs_hi: ['वॉश बेसिन', 'कमोड/सीट', 'नल और शावर', 'पीवीसी पाइप', 'किचन सिंक', 'एक्सेसरीज']
         },
         {
-            id: 'electronics', label: 'Electronics', icon: 'laptop',
-            subs: ['Smartphones', 'Laptops', 'Tablets', 'Headphones', 'Smartwatches', 'Cameras']
+            id: 'electronics', label: 'Electronics', label_hi: 'इलेक्ट्रॉनिक्स', icon: 'laptop',
+            subs: ['Smartphones', 'Laptops', 'Tablets', 'Headphones', 'Smartwatches', 'Cameras'],
+            subs_hi: ['स्मार्टफोन', 'लैपटॉप', 'टैबलेट', 'हेडफोन', 'स्मार्टवॉच', 'कैमरा']
         },
         {
-            id: 'furniture_sales', label: 'Furniture', icon: 'armchair',
-            subs: ['Solid Wood Bed', 'Office Chairs', 'Dining Set', 'Almirah', 'Sofa Set', 'Study Table']
+            id: 'furniture_sales', label: 'Furniture', label_hi: 'फर्नीचर', icon: 'armchair',
+            subs: ['Solid Wood Bed', 'Office Chairs', 'Dining Set', 'Almirah', 'Sofa Set', 'Study Table'],
+            subs_hi: ['बेड (Bed)', 'ऑफिस कुर्सी', 'डाइनिंग सेट', 'अलमारी', 'सोफा सेट', 'स्टडी टेबल']
         },
         {
-            id: 'supermarket', label: 'Grocery / FMCG', icon: 'shopping-cart',
-            subs: ['Rice & Dal', 'Oil & Masala', 'Beverages', 'Cleaning Items', 'Personal Care', 'Snacks']
+            id: 'supermarket', label: 'Grocery / FMCG', label_hi: 'किराना / सुपरमार्केट', icon: 'shopping-cart',
+            subs: ['Rice & Dal', 'Oil & Masala', 'Beverages', 'Cleaning Items', 'Personal Care', 'Snacks'],
+            subs_hi: ['चावल और दाल', 'तेल और मसाला', 'कोल्ड ड्रिंक्स', 'सफाई का सामान', 'पर्सनल केयर', 'स्नैक्स']
         },
         {
-            id: 'fashion', label: 'Fashion', icon: 'shirt',
-            subs: ['Men Clothing', 'Women Ethnic', 'Footwear', 'Watches', 'Bags & Wallets']
+            id: 'fashion', label: 'Fashion', label_hi: 'फैशन / कपड़े', icon: 'shirt',
+            subs: ['Men Clothing', 'Women Ethnic', 'Footwear', 'Watches', 'Bags & Wallets'],
+            subs_hi: ['पुरुषों के कपड़े', 'महिलाओं के कपड़े', 'जूते/चप्पल', 'घड़ियाँ', 'बैग और वॉलेट']
         },
         {
-            id: 'stationery', label: 'Books & Stationery', icon: 'pen-tool',
-            subs: ['Office Supply', 'School Books', 'Art Materials', 'Calculators', 'Gift Items']
+            id: 'stationery', label: 'Books & Stationery', label_hi: 'किताबें और स्टेशनरी', icon: 'pen-tool',
+            subs: ['Office Supply', 'School Books', 'Art Materials', 'Calculators', 'Gift Items'],
+            subs_hi: ['ऑफिस का सामान', 'स्कूल की किताबें', 'आर्ट का सामान', 'कैलकुलेटर', 'गिफ्ट आइटम']
         },
-        { id: 'agriculture', label: 'Agri & Farming', icon: 'sprout', subs: ['Seeds', 'Fertilizer', 'Pesticides', 'Agri Tools', 'Irrigation Pipes'] },
-        { id: 'tiles', label: 'Tiles & Marble', icon: 'grid', subs: ['Vitrified Tiles', 'Ceramic Walls', 'Marble Slabs', 'Granite', 'Tile Epoxy'] },
-        { id: 'mobile_acc', label: 'Mobile Access.', icon: 'phone-incoming', subs: ['Charger', 'Back Cover', 'Tempered Glass', 'Powerbank'] },
-        { id: 'kitchen', label: 'Kitchenware', icon: 'utensils', subs: ['Mixer/Grinder', 'Gas Stove', 'Cooker Set', 'Glassware'] },
+        {
+            id: 'agriculture', label: 'Agri & Farming', label_hi: 'खेती किसानी', icon: 'sprout',
+            subs: ['Seeds', 'Fertilizer', 'Pesticides', 'Agri Tools', 'Irrigation Pipes'],
+            subs_hi: ['बीज', 'खाद', 'कीटनाशक', 'खेती के औजार', 'सिंचाई पाइप']
+        },
+        {
+            id: 'tiles', label: 'Tiles & Marble', label_hi: 'टाइल्स और पत्थर', icon: 'grid',
+            subs: ['Vitrified Tiles', 'Ceramic Walls', 'Marble Slabs', 'Granite', 'Tile Epoxy'],
+            subs_hi: ['विट्रीफाइड टाइल्स', 'सेरामिक दीवार', 'मार्बल', 'ग्रेनाइट', 'टाइल्स इपॉक्सी']
+        },
+        {
+            id: 'mobile_acc', label: 'Mobile Access.', label_hi: 'मोबाइल एक्सेसरीज', icon: 'phone-incoming',
+            subs: ['Charger', 'Back Cover', 'Tempered Glass', 'Powerbank'],
+            subs_hi: ['चार्जर', 'बैक कवर', 'टेंपर्ड ग्लास', 'पावर बैंक']
+        },
+        {
+            id: 'kitchen', label: 'Kitchenware', label_hi: 'रसोई का सामान', icon: 'utensils',
+            subs: ['Mixer/Grinder', 'Gas Stove', 'Cooker Set', 'Glassware'],
+            subs_hi: ['मिक्सर/ग्राइंडर', 'गैस चूल्हा', 'कुकर सेट', 'कांच का सामान']
+        },
         { id: 'auto_parts', label: 'Auto Parts', icon: 'settings', subs: ['Engine Oil', 'Tyre/Tube', 'Filters', 'Brake Pads', 'Batteries'] },
         { id: 'toys', label: 'Toys & Gifts', icon: 'gift', subs: ['Electric Cars', 'Educational Toys', 'Board Games', 'Soft Toys'] },
         { id: 'sports', label: 'Sports Equipment', icon: 'trophy', subs: ['Cricket Kit', 'Gym Weights', 'Badminton', 'Cycles'] },
