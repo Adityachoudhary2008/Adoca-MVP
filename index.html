@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Adoca Services - The most trusted hyperlocal marketplace for services and bulk products. Connect with verified experts instantly.">
+    <meta name="keywords"
+        content="local services, bulk products, hyperlocal marketplace, Rampur, electrician, construction materials">
+
+    <!-- SEO & Social Sharing (OpenGraph) -->
+    <meta property="og:title" content="Adoca Services | Trusted Local Marketplace">
+    <meta property="og:description"
+        content="Connect with verified local experts for home services and bulk supplies. Simple, fast, and reliable.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adoca.services">
+    <meta property="og:image" content="https://adoca.services/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adoca Services">
+    <meta name="twitter:description" content="Finding local experts made simple for everyone.">
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#00129F">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <title>Adoca Services | Verified Local Experts & Suppliers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (CDN for simplicity) -->
+    <!-- Core Web Certification -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header class="q-header" role="banner">
+        <div class="q-brand" onclick="app.navigate(null)">
+            <div class="q-brand-dot"></div>
+            <h1>ADOCA</h1>
+        </div>
+    </header>
+
+    <!-- Quantum Main Hub -->
+    <main id="app-container" class="q-screen" role="main"></main>
+
+    <!-- Mobile-First Bottom Action Bar -->
+    <nav class="q-bottom-nav" role="navigation" aria-label="Quick Access">
+        <div class="q-nav-item active" id="nav-home" onclick="app.navigate(null)">
+            <i data-lucide="layout-grid"></i>
+            <span>Nexus</span>
+        </div>
+        <div class="q-nav-item" id="nav-services" onclick="app.navigate('service')">
+            <i data-lucide="zap"></i>
+            <span>Experts</span>
+        </div>
+        <div class="q-nav-item" id="nav-products" onclick="app.navigate('product')">
+            <i data-lucide="package"></i>
+            <span>Supply</span>
+        </div>
+        <div class="q-nav-item" onclick="app.navigate(null, null, null, 'contact')">
+            <i data-lucide="headset"></i>
+            <span>Support</span>
+        </div>
+    </nav>
+
+    <!-- Quantum System Nexus -->
+    <div id="q-toast-container" aria-live="polite"></div>
+
+    <!-- Rapid Support FAB Overlay -->
+    <a href="https://wa.me/917631441992" class="fab" target="_blank" aria-label="Direct WhatsApp Nexus">
+        <i data-lucide="message-circle" style="width:32px; height:32px; fill: white;"></i>
+    </a>
+
+    <script src="js/config.js"></script>
+    <script src="js/submit-handler.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
