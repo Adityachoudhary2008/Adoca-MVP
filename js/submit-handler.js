@@ -4,7 +4,7 @@
 
 const submitHandler = {
     // Replace with your actual production URLs
-    GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzUydNaLRi8eoZKx7JSJVk0eWBXE4LqA_hxgg9UD9-SMGqPGXAUnuN2hv1Ceniq23JnxA/exec',
+    GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycby_6QoxEppI1r_pgBKp9MXzosCok2TLjYIla7b0I9lznZ79IP_In_2joXO8vhABrUzRtg/exec',
     FORMSPREE_ENDPOINT: '',
 
     // Target email provided by user
