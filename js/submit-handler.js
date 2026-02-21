@@ -27,16 +27,12 @@ const submitHandler = {
         // If GOOGLE_SCRIPT_URL is provided, we use it as the primary channel.
         if (this.GOOGLE_SCRIPT_URL) {
             try {
-                // Using URLSearchParams for the most robust "Simple Request" (no-cors)
-                const params = new URLSearchParams();
-                for (const key in payload) {
-                    params.append(key, payload[key]);
-                }
-
+                // Matching the user's current script (JSON.parse version)
                 await fetch(this.GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    body: params
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
                 });
 
                 // no-cors always returns opaque response, so we certify success
