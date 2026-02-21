@@ -27,10 +27,11 @@ const submitHandler = {
         // If GOOGLE_SCRIPT_URL is provided, we use it as the primary channel.
         if (this.GOOGLE_SCRIPT_URL) {
             try {
+                // Using text/plain to avoid CORS preflight (Simple Request)
                 const response = await fetch(this.GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 'Content-Type': 'text/plain' },
                     body: JSON.stringify(payload)
                 });
                 // Note: no-cors mode always returns opaque response (status 0), 
