@@ -27,15 +27,19 @@ const submitHandler = {
         // If GOOGLE_SCRIPT_URL is provided, we use it as the primary channel.
         if (this.GOOGLE_SCRIPT_URL) {
             try {
-                // Using text/plain to avoid CORS preflight (Simple Request)
-                const response = await fetch(this.GOOGLE_SCRIPT_URL, {
+                // Using URLSearchParams for the most robust "Simple Request" (no-cors)
+                const params = new URLSearchParams();
+                for (const key in payload) {
+                    params.append(key, payload[key]);
+                }
+
+                await fetch(this.GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload)
+                    body: params
                 });
-                // Note: no-cors mode always returns opaque response (status 0), 
-                // but we assume success if no exception is thrown.
+
+                // no-cors always returns opaque response, so we certify success
                 result.success = true;
             } catch (err) {
                 console.error("Google Sheets Submission Error:", err);
