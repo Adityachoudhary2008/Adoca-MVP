@@ -42,14 +42,47 @@
 <body>
 
     <header class="q-header" role="banner">
-        <div class="q-brand" onclick="app.navigate(null)">
-            <div class="q-brand-dot"></div>
-            <h1>ADOCA</h1>
+        <div class="q-header-inner">
+            <div class="q-brand" onclick="app.navigate(null)">
+                <img src="assets/logo.png" alt="Adoca Logo" class="q-logo-img">
+                <h1>adoca</h1>
+            </div>
+
+            <nav class="q-desktop-nav">
+                <a href="#" onclick="app.navigate(null)">Home</a>
+                <a href="#how">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="#sellers">For Sellers</a>
+            </nav>
+
+            <div class="q-header-actions">
+                <div class="q-user-pill">
+                    <i data-lucide="user"></i>
+                </div>
+                <button class="q-btn-primary q-btn-sm" onclick="app.navigate('service')">Get Started</button>
+                <div class="q-mobile-menu-btn" onclick="app.toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Global Mobile Menu Overlay -->
+    <div id="q-mobile-menu" class="q-mobile-menu">
+        <div class="q-mobile-menu-content">
+            <a href="#" onclick="app.navigate(null); app.toggleMobileMenu()">Home</a>
+            <a href="#how" onclick="app.toggleMobileMenu()">How It Works</a>
+            <a href="#features" onclick="app.toggleMobileMenu()">Features</a>
+            <a href="#sellers" onclick="app.toggleMobileMenu()">For Sellers</a>
+            <hr style="opacity: 0.1;">
+            <button class="q-btn-primary" style="width: 100%;"
+                onclick="app.navigate('service'); app.toggleMobileMenu()">Get Started</button>
+            <div id="mobile-lang-toggle" style="margin-top: 16px;"></div>
+        </div>
+    </div>
+
     <!-- Quantum Main Hub -->
-    <main id="app-container" class="q-screen" role="main"></main>
+    <main id="app-container" role="main"></main>
 
     <!-- Mobile-First Bottom Action Bar -->
     <nav class="q-bottom-nav" role="navigation" aria-label="Quick Access">
@@ -61,9 +94,9 @@
             <i data-lucide="zap"></i>
             <span>Experts</span>
         </div>
-        <div class="q-nav-item" id="nav-products" onclick="app.navigate('product')">
-            <i data-lucide="package"></i>
-            <span>Supply</span>
+        <div class="q-nav-item" id="nav-activity" onclick="app.navigate(null, null, null, 'activity')">
+            <i data-lucide="history"></i>
+            <span>Activity</span>
         </div>
         <div class="q-nav-item" onclick="app.navigate(null, null, null, 'contact')">
             <i data-lucide="headset"></i>

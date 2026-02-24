@@ -13,8 +13,35 @@ const CONFIG = {
         ADDRESS: "Samastipur, Bihar, India",
         EMAIL: "adityakumarchaudhari66@gmail.com",
         PHONE: "+91 7631441992",
-        HOURS: "Monday – Saturday, 10:00 AM – 7:00 PM"
+        HOURS: "Monday – Saturday, 10:00 AM – 7:00 PM",
+        WHATSAPP: "917631441992"
     },
+
+    // --- INDUSTRIAL METADATA (v10.0) ---
+    TRENDING_EXPERTS: ['electrician', 'plumber', 'cleaning', 'ac_repair', 'beautician'],
+    TRUST_STATS: {
+        verified_pros: "850+",
+        avg_rating: "4.9/5",
+        response_time: "45 Mins",
+        projects_done: "12,000+"
+    },
+
+    SUPPORT_CHANNELS: [
+        { id: 'call', label: 'Call Supervisor', desc: 'Direct technical intervention', icon: 'phone', action: 'tel:+917631441992', status: 'Active', wait: '2 Mins' },
+        { id: 'wa', label: 'WhatsApp Nexus', desc: 'Quick status updates', icon: 'message-circle', action: 'https://wa.me/917631441992', status: 'Active', wait: 'Instant' },
+        { id: 'mail', label: 'Official Query', desc: 'Formal escalations', icon: 'mail', action: 'mailto:adityakumarchaudhari66@gmail.com', status: '24h', wait: '4 Hours' }
+    ],
+
+    BUSINESS_BENEFITS: [
+        { title: 'Zero Commission', desc: 'Keep 100% of your earnings. We don\'t take a cut.', icon: 'percent' },
+        { title: 'Direct Leads', desc: 'Connect directly with customers in your locality.', icon: 'zap' },
+        { title: 'Industrial SEO', desc: 'Your business listed on India\'s first Quantum Marketplace.', icon: 'globe' }
+    ],
+
+    PARTNER_TIERS: [
+        { id: 'verified', label: 'Verified Partner', badge: 'check-circle', color: '#16A34A', benefits: ['Verified Badge', 'Priority in Search', 'Lead Dashboard'] },
+        { id: 'elite', label: 'Elite Industrial', badge: 'award', color: '#B45309', benefits: ['Featured Placement', 'Premium Support', 'Zero Lead Ghosting'] }
+    ],
 
     // 50+ SERVICE CATEGORIES WITH SUB-CATEGORIES
     SERVICE_CATEGORIES: [
@@ -267,12 +294,17 @@ const CONFIG = {
             sub_tagline: "India's first Quantum Marketplace for verified experts and industrial supply.",
             nav_home: "Nexus",
             nav_experts: "Experts",
-            nav_supply: "Supply",
+            nav_activity: "Activity",
             nav_support: "Support",
-            search_placeholder: "Search for 'Electrician', 'Cement'...",
+            search_placeholder: "What are you looking for today?",
+            find_deals: "Find Deals",
+            no_commission: "No commission fees",
+            smart_deals: "Smart deals",
+            easy_billing: "Easy billing",
             trending: "Trending Bazaar",
+            elite_pro: "Titan Certified",
             trust_shield: "The Quantum Shield",
-            trust_desc: "Every request is manually filtered for 100% quality assurance.",
+            trust_desc: "Every request is manually filtered for 100% industrial quality assurance.",
             back: "BACK",
             hub: "NEXUS HUB",
             confirm: "CONFIRM INQUIRY",
@@ -284,16 +316,14 @@ const CONFIG = {
             supply_title: "Supply Catalog",
             contact_title: "Nexus Support",
             contact_desc: "We are available 24/7 for Adoca Partners.",
-            // --- TITAN EVOLUTION (v9.0) ---
-            how_it_works: "How It Works",
-            safety_nexus: "Safety Nexus",
-            popular_searches: "Popular Searches",
-            verified_pro: "Verified Professional",
-            elite_partner: "Elite Industrial Partner",
-            view_details: "View Technical Details",
-            process_step_1: "Request Lodged",
-            process_step_2: "Expert Assigned",
-            process_step_3: "Work Verified"
+            learn_more: "Learn More",
+            // --- NEW HUB LABELS ---
+            business_title: "Grow Your Business",
+            business_desc: "List your shop or services on Adoca and reach thousands of customers instantly.",
+            join_adoca: "Join Adoca Network",
+            merchant_tools: "Merchant Power Tools",
+            faq_title: "Knowledge Base",
+            trending_now: "Trending Near You"
         },
         hi: {
             brand_name: "ADOCA",
@@ -301,10 +331,15 @@ const CONFIG = {
             sub_tagline: "विशेषज्ञों (Experts) और सामान की सप्लाई के लिए भारत का पहला 'क्वांटम' बाज़ार।",
             nav_home: "होम",
             nav_experts: "कारीगर",
-            nav_supply: "सामान",
-            nav_support: "मदत",
-            search_placeholder: "'बिजलीवाला', 'सीमेंट' सर्च करें...",
+            nav_activity: "गतिविधि",
+            nav_support: "मदद",
+            search_placeholder: "आज आप क्या ढूंढ रहे हैं?",
+            find_deals: "डील्स खोजें",
+            no_commission: "कोई कमीशन नहीं",
+            smart_deals: "स्मार्ट डील्स",
+            easy_billing: "आसान बिलिंग",
             trending: "आज की मांग (Trending)",
+            elite_pro: "टाइटन सर्टिफाइड",
             trust_shield: "अडोका भरोसा (Shield)",
             trust_desc: "हर काम की क्वालिटी की जांच हमारी टीम खुद करती है।",
             back: "पीछे",
@@ -323,11 +358,23 @@ const CONFIG = {
             safety_nexus: "सुरक्षा और भरोसा",
             popular_searches: "लोग ये ज़्यादा खोज रहे हैं",
             verified_pro: "सर्टिफाइड प्रोफेशनल",
-            elite_partner: "एलीट इंडस्ट्रियल पार्टनर",
+            elite_partner: "एलीट इंडस्ट्रial पार्टनर",
             view_details: "पूरी जानकारी देखें",
             process_step_1: "रिक्वेस्ट दर्ज हुई",
             process_step_2: "एक्सपर्ट नियुक्त हुआ",
-            process_step_3: "काम सफलतापूर्वक पूरा"
+            process_step_3: "काम सफलतापूर्वक पूरा",
+            get_started: "शुरू करें",
+            app_store: "ऐप स्टोर",
+            play_store: "प्ले स्टोर",
+            empower_business: "स्थानीय व्यवसायों का सशक्तिकरण",
+            empower_business_desc: "अगली पीढ़ी के बाज़ार से जुड़ें जो आपके लिए काम करता है। ज़ीरो कमीशन, पूरा कंट्रोल।",
+            learn_more: "और जानें",
+            business_title: "अपना व्यापार बढ़ाएं",
+            business_desc: "Adoca पर अपनी दुकान या सर्विस लिस्ट करें और हजारों ग्राहकों तक पहुँचें।",
+            join_adoca: "Adoca नेटवर्क से जुड़ें",
+            merchant_tools: "मर्चेंट टूल्स",
+            faq_title: "अक्सर पूछे जाने वाले सवाल",
+            trending_now: "आपके आस-पास लोकप्रिय"
         }
     },
 
@@ -343,5 +390,21 @@ const CONFIG = {
         { q: "How to pay?", a: "Pay directly to the provider/seller after work completion or delivery. No advance needed." },
         { q: "Are prices fair?", a: "Since you talk directly to local experts, you get negotiated market rates without hidden app commissions." },
         { q: "What is bulk buy?", a: "Specially for construction and retail where high-volume purchase gets you wholesale rates." }
-    ]
+    ],
+
+    REVIEWS: {
+        electrician: [
+            { name: "Suresh P.", rating: 5, text: "Fixed the house wiring issues in no time. Very neat work." },
+            { name: "Vinay K.", rating: 4, text: "Punctual and professional. Highly recommended for fan repair." }
+        ],
+        plumber: [
+            { name: "Amit B.", rating: 5, text: "Excellent leakage repair. No more dripping taps!" },
+            { name: "Ravi S.", rating: 5, text: "Professional tank cleaning service. Very thorough." }
+        ],
+        default: [
+            { name: "Rahul Singh", rating: 5, text: "Got it delivered within 3 hours at site price! Amazing service." },
+            { name: "Mohan Lal", rating: 5, text: "The bulk buy feature helps me stock my shop without visiting the market daily." },
+            { name: "Priya Sharma", rating: 5, text: "Best hyperlocal app for Samastipur. Fast and reliable support always." }
+        ]
+    }
 };
