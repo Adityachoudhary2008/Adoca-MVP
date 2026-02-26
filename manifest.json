@@ -1,21 +1,24 @@
 {
-  "name": "Adoca Services",
+  "name": "Adoca - Local Experts & Bulk Supply",
   "short_name": "Adoca",
-  "description": "Hyperlocal marketplace for services and bulk products.",
+  "description": "Premium hyperlocal marketplace for verified services and industrial products.",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#00129F",
+  "background_color": "#F8FAFF",
+  "theme_color": "#1E1B9E",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "assets/logo.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
